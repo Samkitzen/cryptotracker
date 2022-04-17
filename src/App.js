@@ -2,13 +2,12 @@ import './App.css';
 import axios from 'axios'
 import { useEffect, useState } from 'react';
 import Coin from './Coin';
+import './Coin.css'
 
 
 function App() {
   const [coins, setCoins] = useState([])
   const [search, setSearch] = useState('')
-
-  let api_url = "https://api.coingecko.com/api/v3/coins/markets?vs_currency=inr&order=market_cap_desc&per_page=100&page=1&sparkline=false";
 
   useEffect(() => {
 
@@ -26,15 +25,15 @@ function App() {
   const handleChange = e => {
     console.log(e.target.value);
     setSearch(e.target.value);
-    
+
   }
-  
+
   const filteredCoins = coins.filter(coin => coin.name.toLowerCase().includes(search.toLowerCase()))
-  
+
   return (
     <div className="coin-app">
       <div className="coin-search">
-        <h1 className="coin-text">Search a Currnecy</h1>
+        <h1 className="coin-text">Search For Any Crypto Currency</h1>
 
         <form>
           <input type="text" placeholder='Search' className='coin-input' onChange={handleChange} />
