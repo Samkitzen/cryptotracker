@@ -28,7 +28,9 @@ function App() {
 
   }
 
-  const filteredCoins = coins.filter(coin => coin.name.toLowerCase().includes(search.toLowerCase()))
+  const filteredCoins = coins.filter((coin) => {
+    return (coin.name.toLowerCase().includes(search.toLowerCase()) || coin.symbol.toLowerCase().includes(search.toLowerCase()))
+  })
 
   return (
     <div className="coin-app">
