@@ -4,7 +4,9 @@ const Coin = (props) => {
     const price_change = price_change_percentage_24h;
   return (
     <div className='coin-container'>
+
         <div className="coin-row">
+
             <div className="coin">
                 <img src={image} alt="crypto" />
                 <h1>{name}</h1>
@@ -20,7 +22,9 @@ const Coin = (props) => {
                 )}
                 <p className="coin-market-cap">{market_cap.toLocaleString()}</p>
             </div>
+            
         </div>
+
     </div>
   )
 }
