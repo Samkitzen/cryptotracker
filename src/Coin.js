@@ -16,9 +16,9 @@ const Coin = (props) => {
                 <p className="coin-price">₹{current_price.toLocaleString()}</p>
                 <p className="coin-volume">{total_volume.toLocaleString()} </p>
                 {price_change < 0?(
-                    <p className='coin-percent red'>{price_change.toFixed(2)}% </p>
+                    <p className='coin-percent red'>{price_change!==null?price_change.toFixed(2):0}% </p>
                 ):(
-                    <p className='coin-percent green'>{price_change.toFixed(2)}% </p>
+                    <p className='coin-percent green'>{price_change!==null?price_change.toFixed(2):0}% </p>
                 )}
                 <p className="coin-market-cap">{market_cap.toLocaleString()}</p>
             </div>

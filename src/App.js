@@ -15,6 +15,7 @@ function App() {
 
     axios.get(process.env.REACT_APP_API_URL)
       .then(res => {
+        console.log(res);
         setCoins(res.data);
         console.log(res.data);
       })
